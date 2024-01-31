@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Alle Student:innen</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <h1>Student:innenliste</h1>
+
+    <hr class="border-2 border-top border-info">
+    <a th:href="@{/web/v1/studenten/insert}" class="btn btn-info" role="button">Student:in hinzufügen</a> <!-- mit @/web/v1... Referenzieren-->
+    <hr class="border-2 border-top border-info">
+
+    <table class="table" id="studentTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>PLZ</th>
+            <th>Aktion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student: ${allStudents}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.plz}"></td>
+            <td>Aktion offen</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

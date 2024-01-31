@@ -17,6 +17,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/studenten")
 @CrossOrigin(origins = "http://127.0.0.1:5500")
+//CrossOrigin = Auf einen 2x Server hochladen für Frontend,
+// Backend und Frontend liegen nicht am gleichen Server
 public class StudentRestController {
 
     private StudentenService studentenService;
