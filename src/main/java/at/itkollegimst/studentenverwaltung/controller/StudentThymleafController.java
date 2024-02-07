@@ -76,4 +76,14 @@ public class StudentThymleafController {
         }
     }
 
+    @GetMapping("/delete/{id}")
+    public String studentLoeschen(@PathVariable Long id) {
+        try {
+            this.studentenService.studentLoeschenMitId(id);
+            return "redirect:/web/v1/studenten";
+        } catch (StudentNichtGefunden studentNichtGefunden) {
+            return "redirect:/web/v1/studenten";
+        }
+    }
+
 }
