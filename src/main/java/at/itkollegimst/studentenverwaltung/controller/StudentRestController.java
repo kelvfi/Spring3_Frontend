@@ -5,13 +5,14 @@ import at.itkollegimst.studentenverwaltung.exceptions.FormValidierungExceptionDT
 import at.itkollegimst.studentenverwaltung.exceptions.StudentNichtGefunden;
 import at.itkollegimst.studentenverwaltung.exceptions.StudentValidierungFehlgeschlagen;
 import at.itkollegimst.studentenverwaltung.services.StudentenService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 import java.util.List;
 
 @RestController

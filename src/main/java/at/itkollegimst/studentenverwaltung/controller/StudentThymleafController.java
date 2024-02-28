@@ -3,7 +3,8 @@ package at.itkollegimst.studentenverwaltung.controller;
 import at.itkollegimst.studentenverwaltung.domain.Student;
 import at.itkollegimst.studentenverwaltung.exceptions.StudentNichtGefunden;
 import at.itkollegimst.studentenverwaltung.services.StudentenService;
-import org.dom4j.rule.Mode;
+import jakarta.validation.Valid;
+//import org.dom4j.rule.Mode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/web/v1/studenten")
